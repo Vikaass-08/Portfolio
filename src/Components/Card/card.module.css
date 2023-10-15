@@ -1,0 +1,38 @@
+.card{
+  width: 310px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  border-radius: 10px;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+
+.cardImgView img{
+  width: 270px;
+  height: 150px;
+  border-radius: 10px;
+  margin: auto 0;
+  border: 2px solid var(--white);
+}
+
+.img img {
+  width: 250px;
+  height: 100px;
+}
+
+.cardTitleView {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.cardButtonView {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cardButtonView:first-child {
+  border: 1px solid var(--white);
+}

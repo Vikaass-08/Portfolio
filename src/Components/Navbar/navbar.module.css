@@ -1,0 +1,106 @@
+
+.navbar {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.circleNav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  position: relative;
+  border: 1px solid var(--white);
+  transition: all 0.3s ease;
+}
+
+
+.one,
+.two,
+.three {
+  content: '';
+  position: absolute;
+  background-color: var(--pink);
+  z-index: 0;
+  transition: width 0.3s;
+}
+
+.one {
+  left: 10px;
+  top: 15px;
+  width: 30px;
+  height: 2px;
+}
+
+.two {
+  left: 10px;
+  top: 23px;
+  width: 30px;
+  height: 2px;
+}
+
+.three {
+  left: 10px;
+  top: 32px;
+  width: 30px;
+  height: 2px;
+  animation-direction: reverse;
+}
+
+.circleNav:hover .one {
+  width: 15px;
+}
+
+.circleNav:hover .three {
+  right: 10px;
+  width: 15px;
+  animation-direction: alternate;
+}
+
+.circleNav:active {
+  background-color: var(--pink);
+}
+
+.hoverOne,
+.hoverTwo,
+.hoverThree {
+  content: '';
+  position: absolute;
+  background-color: var(--pink);
+  z-index: 0;
+  width: 25px;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hoverTwo {
+  left: 12px;
+  top: 24px;
+  height: 0;
+  width: 0;
+}
+
+.hoverOne {
+  left: 12px;
+  top: 24px;
+  transform: rotate(45deg);
+}
+
+.hoverThree {
+  left: 12px;
+  top: 24px;
+  transform: rotate(-45deg);
+}
+
+/* .hoverOne {
+  transform: rotate(-45deg);
+  left: 12px;
+  top: 25px;
+}
+
+.hoverThree {
+  transform: rotate(-135deg);
+  right: 12px;
+  top: 25px;
+} */

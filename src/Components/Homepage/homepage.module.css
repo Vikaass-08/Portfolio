@@ -1,0 +1,173 @@
+.homePage {
+  width: 70%;
+  min-height: 80vh;
+  height: auto;
+  padding: 3%;
+  background-color: var(--foreground-color);
+  border-radius: 30px;
+  margin: 2% 0% 2% 0%;
+  border: 0.2px solid var(--white);
+}
+
+.zoomIn {
+  animation: ZoomIn 0.5s ease-out;
+}
+
+.zoomOut {
+  animation: ZoomOut 0.5s ease-out;
+}
+
+.homeBody {
+  width: 100%;
+  min-height: 70vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeBodyLeftSide {
+  flex: 1;
+  width: 100%;
+  text-align: left;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.homeBodyLeftSide > p, h1, h2 {
+  flex: 1;
+  margin-bottom: 25px;
+}
+
+.homeBodyLeftSide > h1 {
+  color: var(--pink);
+}
+
+.homeBodyRightSide {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profilePicBox{
+  max-width: 350px;
+  border-radius: 50%;
+}
+.profilePicBox img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.homeBodyButton {
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.buttonOne {
+  margin: 10px 50px 0px 0px
+}
+
+.buttonTwo {
+  margin: 10px 50px 0px 0px
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+  .homePage {
+    border-radius: 20px;
+  }
+
+  .homeBody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homeBodyRightSide { 
+    order: 1; 
+    
+  }
+
+  .homeBodyLeftSide { 
+    order: 2; 
+    align-items: center;
+  }
+
+  .homeBodyLeftSide > p, h1, h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .homeBodyLeftSide > p {
+    margin-top: 20px;
+  }
+
+  .homeBodyLeftSide > h1 {
+    font-size: 30px;
+  }
+
+  .homeBodyLeftSide > h2 {
+    font-size: 18px;
+  }
+
+  .homeBodyButton {
+    justify-content: space-around;
+  }
+
+  .profilePicBox{
+    max-width: 250px;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  .homePage {
+    text-align: center;
+  }
+  .homeBodyButton {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonOne {
+    margin: 20px 0px 0px 0px
+  }
+  
+  .buttonTwo {
+    margin: 20px 0px 20px 0px
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) { 
+
+  .homePage {
+    width: 90%;
+  }
+
+}
+
+
+@keyframes ZoomIn {  
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes ZoomOut {  
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0, 0);
+  }
+}

@@ -1,0 +1,151 @@
+.about {
+  width: 70%;
+  min-height: 80vh;
+  height: auto;
+  margin: 2% 0% 2% 0%;
+  padding: 2% 2% 2% 2%;  
+  background-color: var(--foreground-color);
+  border-radius: 30px;
+  border: 0.2px solid var(--white);
+  font-weight: 300;
+}
+
+.aboutHeading {
+  min-height: 10vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: x-large;
+  margin: 20px 0px 30px 0px;
+}
+
+.aboutContent{
+  width: 100%;
+  min-height: 80vh;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutContentLeftSide{
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imageBox img {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  max-width: 380px;
+  border: 1px solid var(--white);
+  margin: auto;
+  border-radius: 10px;
+}
+
+.aboutContentRightSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px 0px 0px 50px;
+}
+
+.aboutUs {
+  margin: 10px 0px 30px 0px;
+}
+
+.skillHead {
+  text-transform: capitalize;
+  font-size: large;
+  font-weight: 600;
+  padding: 0px 0px 20px 0px;
+}
+
+.skill {
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+  padding: 5px 15px;
+  text-transform: capitalize;
+  margin: 0px;
+  margin: 0 10px 10px 0;
+  width: fit-content;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.aboutTabs {
+  margin: 20px 0px 20px 0;
+}
+
+.aboutTabs button {
+  background-color: transparent;
+  border: none;
+  margin-right: 30px;
+  font-size: 20px;
+  color: var(--blue-dark);
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+#eduBtn:hover {
+  border-bottom: 1px solid ;
+}
+
+.active {
+ color: var(--pink) !important;
+ border-bottom: 1px solid !important;
+ opacity: 1 !important;
+ cursor: auto !important;
+}
+
+
+@media only screen and (max-width: 1080px) {
+
+  .about {
+    border-radius: 20px
+  }
+  .aboutContent{
+    width: 100%;
+    display: block;
+  }
+
+  .aboutContentRightSide{
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
+  .imageBox img {
+    width: 200px;
+  }
+
+  .aboutContentRightSide {
+    margin: 5px;
+  }
+
+  .aboutTabs {
+    display: flex;
+  }
+
+  .aboutTabs button {
+    font-size: 20px;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .about {
+    width: 90%;
+  }
+
+}

@@ -1,0 +1,97 @@
+.paths {
+  width: 70%;
+  min-height: 80vh;
+  height: auto;
+  padding: 2% 2% 2% 2%;
+  position: relative;
+  background-color: var(--foreground-color);
+  border-radius: 30px;
+  margin: 2% 0% 2% 0%;
+  border: 0.2px solid var(--white);
+}
+
+.centerBack {
+  border: 1px solid var(--red);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoomIn {
+  animation: ZoomIn 0.5s ease-out;
+}
+
+.zoomOut {
+  animation: ZoomOut 0.5s ease-out;
+}
+
+.expProjCross {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  background: linear-gradient(to left, var(--blue) 50%, var(--pink) 50%);
+  background-size: 200% 100%;
+  background-position: bottom right;
+  transition: all .3s ease-out;
+}
+
+.expProjCross:hover {
+  background-position: bottom left;
+  color: var(--white);
+}
+
+
+.expProjCrossBefore,
+.expProjCrossAfter {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: var(--pink);
+  border-radius: 0;
+  top: 19px;
+  z-index: 0;
+}
+
+.expProjCrossBefore {
+  transform: rotate(-45deg);
+  left: 10px;
+}
+
+.expProjCrossAfter {
+  transform: rotate(-135deg);
+  right: 10px;
+}
+
+.expProjCross:hover .expProjCrossBefore{
+  background-color: var(--white);
+}
+
+.expProjCross:hover .expProjCrossAfter{
+  background-color: var(--white);
+}
+
+
+@keyframes ZoomIn {  
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes ZoomOut {  
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0, 0);
+  }
+}
