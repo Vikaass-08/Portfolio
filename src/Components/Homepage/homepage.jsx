@@ -1,21 +1,22 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./homepage.module.css"
 import ProfilePic from "../../Static/Images/ProfilePic.jpeg"
 import Button from "../Button/button";
 import Paths from "../Paths/paths";
 import { useNavigate } from "react-router-dom";
 import Heading from "../Heading/Heading";
+import { Animation } from "../../Handlers/context";
 
 const Homepage = (props) => {
 
   const navigate = useNavigate();
   const [currState, updateState] = useState(false);
+  const {animationType, setAnimationType} = useContext(Animation);
 
   const AboutMeAction = () => {
     updateState(true);
-    setTimeout(() => {
-      navigate("/about");
-    }, 300);
+    setAnimationType("about");
+    navigate("/about");
   }
   const ContactMeAction = () => {}
 

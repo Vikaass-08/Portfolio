@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./about.module.css"
 import ProfilePic from "../../Static/Images/ProfilePic.jpeg"
 import Timeline from "../Timeline/timeline";
 import Paths from "../Paths/paths";
 import Heading from "../Heading/Heading";
+import { Animation } from "../../Handlers/context";
 
 const About = (props) => {
   const [activeButton, setActiveButton] = useState(true);
+  const {animationType, setAnimationType} = useContext(Animation);
 
   const eduBtnAction = () => {
     setActiveButton(true)
@@ -16,11 +18,14 @@ const About = (props) => {
     setActiveButton(false);
   }
 
+  const fadeInAnim = `${styles.about} ${styles.zoomIn}`;
+  const normalClass = `${styles.about}`;
+
   return (
     props.showNavbar ? 
       <Paths showNavbar={props.showNavbar} setNavbar={props.setNavbar}  /> :
       (
-        <div className={styles.about}>
+        <div className={animationType == "about" ? fadeInAnim : normalClass }>
           <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
           <div className={styles.aboutHeading}>
             <h2>about me</h2>
