@@ -5,13 +5,14 @@ import Timeline from "../Timeline/timeline";
 import Paths from "../Paths/paths";
 import Heading from "../Heading/Heading";
 import { Animation } from "../../Handlers/context";
+import { EduData, aboutMe, skillSet, ExpData } from "../../Static/data/aboutData";
 
 const About = (props) => {
   const [activeButton, setActiveButton] = useState(true);
-  const {animationType, setAnimationType} = useContext(Animation);
+  const {animationType} = useContext(Animation);
 
   const eduBtnAction = () => {
-    setActiveButton(true)
+    setActiveButton(true);
   }
   
   const expBtnAction = () => {
@@ -25,7 +26,7 @@ const About = (props) => {
     props.showNavbar ? 
       <Paths showNavbar={props.showNavbar} setNavbar={props.setNavbar}  /> :
       (
-        <div className={animationType == "about" ? fadeInAnim : normalClass }>
+        <div className={animationType === "about" ? fadeInAnim : normalClass }>
           <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
           <div className={styles.aboutHeading}>
             <h2>about me</h2>
@@ -58,10 +59,18 @@ const About = (props) => {
                   <button id={styles.expBtn} className={!activeButton ? styles.active : styles.empty} onClick={expBtnAction}> Work Experience </button>
                 </div>
                 <div style={!activeButton ? {display: "none"} : {}}>
-                  {EduData.map((timeline, idx) => (<Timeline key={idx} data={timeline} /> ))}
+                  {Object.keys(EduData).map((key, index) => {
+                    return (
+                      <Timeline key={EduData[key].id} data={EduData[key]} />
+                    );
+                  })}
                 </div>
                 <div style={activeButton ? {display: "none"} : {}}>
-                  {ExpData.map((timeline, idx) => (<Timeline key={idx} data={timeline} /> ))}
+                  {Object.keys(ExpData).map((key, index) => {
+                    return (
+                      <Timeline key={ExpData[key].id} data={ExpData[key]} />
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -70,54 +79,6 @@ const About = (props) => {
       )
   )
 }
-
-const EduData =[
-  ["July 2018 - July 2022", "Bachelor Of Technology", "St. Francis Institute Of Technology", ["Electronics and Telecommunications", "CGPA: 8.96"]],
-  ["June 2016 - June 2018", "HSC", "Vidyanidhi Junior College Of Science", ["Percentage: 79.47%"]],
-  ["March 2007 - March 2016", "SSC", "Smt. Rajrani Malhotra Vidyalaya", ["Percentage: 87.20%"]]
-]
-
-const ExpData =[
-  ["June 2022 - Present", "Juspay", "Frontend Engineer", 
-    [ "Worked on tech Such as Purescript, Javascript, React.js, Bitbucket.",
-      "Developed a generic Popup Model.",
-      "Worked on Test directory which has improved the development speed by 70%."
-    ]
-  ],
-  ["June 2022 - Present", "Juspay", "Frontend Engineer", 
-    [ "Worked on tech Such as Purescript, Javascript, React.js, Bitbucket.",
-      "Developed a generic Popup Model.",
-      "Worked on Test directory which has improved the development speed by 70%."
-    ]
-  ],
-  ["June 2022 - Present", "Juspay", "Frontend Engineer", 
-    [ "Worked on tech Such as Purescript, Javascript, React.js, Bitbucket.",
-      "Developed a generic Popup Model.",
-      "Worked on Test directory which has improved the development speed by 70%."
-    ]
-  ]
-]
-
-const aboutMe = "Goal-oriented Web Developer with strong commitment to collaboration and solutions-oriented problem-solving. Use various web design software to develop cusomer-focused websites and designs. Committed to high standards of web design, user experience, usablity and speed for multiple types of end-users. Successful at maintaining customer satisfaction through effective customer support. Solution driven professional excelling in highly collaborative work environment, finding solutions to challenges and focused on customer-satisfaction. Proven experience develping consumer-focused web sites using HTML, CSS, JQuery, PHP and Javascript. Translating solutions into code and working across many differnt Apis, third-party integrations and databases.";
-const skillSet = 
-  [ "Html"
-  , "Css"
-  , "Javascript"
-  , "Java"
-  , "JQuery"
-  , "React.Js"
-  , "Python"
-  , "Django"
-  , "Github"
-  , "Git"
-  , "Data Structures & Algorithms"
-  , "Linux"
-  , "PHP"
-  , "Computer Networking"
-  , "Operating System"
-  , "SQL"
-  , "Purescript"
-  ]
 
 
 

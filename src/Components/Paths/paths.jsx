@@ -1,15 +1,26 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./paths.module.css"
 import Button from "../Button/button";
 import { useNavigate } from "react-router-dom";
+import { Animation } from "../../Handlers/context";
 
 const Paths = (props) => {
 
   const [currState, updateState] = useState(props.showNavbar);
+  const {animationType, setAnimationType} = useContext(Animation);
   const navigate = useNavigate();
 
   const fadeInAnim = `${styles.paths} ${styles.zoomIn}`;
   const fadeOutAnim = `${styles.paths} ${styles.zoomOut}`;
+
+  const changePath = (path) => {
+    setAnimationType("");
+    updateState(false); 
+    setTimeout( () => {
+      navigate(path); 
+      props.setNavbar(false);
+    }, 200);
+  }
 
   return (
     <div className={currState ? fadeInAnim : fadeOutAnim }>
@@ -18,9 +29,23 @@ const Paths = (props) => {
         <div className={styles.expProjCrossAfter}></div>
       </div>
       <div className={styles.centerBack}>
-      <Button onClickAction={() => {updateState(false); setTimeout( () => {navigate("/"); props.setNavbar(false);}, 200);}} buttonText="Home" />
-      <Button onClickAction={() => {updateState(false); setTimeout( () => {navigate("/about"); props.setNavbar(false);}, 200);}} buttonText="About" />
-      <Button onClickAction={() => {updateState(false); setTimeout( () => {navigate("/project"); props.setNavbar(false);}, 200);}} buttonText="Project" />
+        <ul>
+          <div>
+            <div className={styles.button}>
+              <button onClick={() => changePath("/")}>Home</button>
+            </div>
+          </div>
+          <div>
+            <div className={styles.button}>
+              <button onClick={() => changePath("/about")}>About</button>
+            </div>
+          </div>
+          <div>
+            <div className={styles.button}>
+              <button onClick={() => changePath("/project")}>Projects</button>
+            </div>
+          </div>
+        </ul>
       </div>
     </div>
   )
