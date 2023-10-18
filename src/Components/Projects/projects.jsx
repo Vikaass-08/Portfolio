@@ -1,21 +1,25 @@
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./projects.module.css"
 import Card from "../Card/card";
 import cardData from "../../Static/data/projectData";
 import ExpandedProject from "../ExpandedProject/expandedProject";
 import Paths from "../Paths/paths";
 import Heading from "../Heading/Heading";
+import { Animation } from "../../Handlers/context";
 
 const Projects = (props) => {
 
   const [expandPopup, setPopupValue] = useState(false);
   const [ProjectData, setProjectData] = useState({});
+  const {animationType} = useContext(Animation);
 
   const showPopupBtn = (data) => (() => {
       setProjectData(data);
       setPopupValue(true);
     })
+  const fadeInAnim = `${styles.projects} ${styles.zoomIn}`;
+  const normalClass = `${styles.projects}`;
 
   return (
     props.showNavbar ? 
@@ -23,7 +27,7 @@ const Projects = (props) => {
       expandPopup ? 
         <ExpandedProject data={ProjectData} setPopupValue={setPopupValue} expAnim={expandPopup}  /> : 
         (
-          <div className={styles.projects}>
+          <div className={animationType === "projectAnim" ? fadeInAnim : normalClass }>
             <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
             <div className={styles.projectTag}>
               <h1>Recent Projects</h1>

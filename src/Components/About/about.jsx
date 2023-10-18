@@ -26,7 +26,7 @@ const About = (props) => {
     props.showNavbar ? 
       <Paths showNavbar={props.showNavbar} setNavbar={props.setNavbar}  /> :
       (
-        <div className={animationType === "about" ? fadeInAnim : normalClass }>
+        <div className={animationType === "aboutAnim" ? fadeInAnim : normalClass }>
           <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
           <div className={styles.aboutHeading}>
             <h2>about me</h2>
