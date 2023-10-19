@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Homepage from './Components/Homepage/homepage.jsx';
 import About from './Components/About/about.jsx';
 import styles from "./App.module.css"

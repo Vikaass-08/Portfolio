@@ -29,13 +29,13 @@ const Paths = (props) => {
       </div>
       <div className={styles.centerBack}>
         <div className={styles.button}>
-          <button onClick={() => changePath("/")}>Home</button>
+          <button onClick={() => changePath("/")}>HOME</button>
         </div>
         <div className={styles.button}>
-          <button onClick={() => changePath("/about")}>About</button>
+          <button onClick={() => changePath("/about")}>ABOUT ME</button>
         </div>
         <div className={styles.button}>
-          <button onClick={() => changePath("/project")}>Projects</button>
+          <button onClick={() => changePath("/project")}>PROJECTS</button>
         </div>
       </div>
     </div>

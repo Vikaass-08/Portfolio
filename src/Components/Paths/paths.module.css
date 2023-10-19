@@ -7,7 +7,6 @@
   background-color: var(--foreground-color);
   border-radius: 30px;
   margin: 2% 0% 2% 0%;
-  border: 0.2px solid var(--white);
 }
 
 .zoomIn {
@@ -22,12 +21,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   position: absolute;
   top: -10px;
   right: -10px;
   cursor: pointer;
-  background: linear-gradient(to left, var(--blue) 50%, var(--pink) 50%);
+  background: linear-gradient(to left, var(--blue) 50%, var(--light-blue) 50%);
   background-size: 200% 100%;
   background-position: bottom right;
   transition: all .3s ease-out;
@@ -45,7 +44,7 @@
   position: absolute;
   width: 20px;
   height: 3px;
-  background-color: var(--pink);
+  background-color: var(--light-blue);
   border-radius: 0;
   top: 19px;
   z-index: 0;
@@ -84,12 +83,12 @@
 
 .button button {
   outline: none;
-  background: linear-gradient(to right, var(--pink) 50%, var(--blue) 50%);
+  background: linear-gradient(to right, var(--light-blue) 50%, var(--blue) 50%);
   display: block;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .3s ease-out;
-  color: var(--pink);
+  color: var(--light-blue);
   font-weight: bold;
   font-size:medium;
   text-transform: capitalize;
@@ -99,7 +98,7 @@
   border: none;
   border-radius: 50px;
   font-size: 25px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   cursor: pointer;
 }
 
@@ -137,6 +136,6 @@
 
   .button button:hover {
     background: var(--blue);
-    color: var(--pink);
+    color: var(--light-blue);
   }
 }

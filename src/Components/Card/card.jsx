@@ -12,7 +12,7 @@ const Card = (props) => {
         <h3>{props.data.title}</h3>
       </div>
       <div className={styles.cardButtonView}>
-        <Button onClickAction={props.action} buttonText="View Project" />
+        <Button onClickAction={props.action} buttonText="Read More" />
       </div>
     </div>
   )

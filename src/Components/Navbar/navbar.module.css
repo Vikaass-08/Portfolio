@@ -11,7 +11,7 @@
   border-radius: 50%;
   background-color: var(--blue);
   position: relative;
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   transition: all 0.3s ease;
 }
 
@@ -21,7 +21,7 @@
 .three {
   content: '';
   position: absolute;
-  background-color: var(--pink);
+  background-color: var(--light-blue);
   z-index: 0;
   transition: width 0.3s;
 }
@@ -59,7 +59,7 @@
 }
 
 .circleNav:active {
-  background-color: var(--pink);
+  background-color: var(--light-blue);
 }
 
 .hoverOne,
@@ -67,7 +67,7 @@
 .hoverThree {
   content: '';
   position: absolute;
-  background-color: var(--pink);
+  background-color: var(--light-blue);
   z-index: 0;
   width: 25px;
   height: 2px;
@@ -92,15 +92,3 @@
   top: 24px;
   transform: rotate(-45deg);
 }
-
-/* .hoverOne {
-  transform: rotate(-45deg);
-  left: 12px;
-  top: 25px;
-}
-
-.hoverThree {
-  transform: rotate(-135deg);
-  right: 12px;
-  top: 25px;
-} */

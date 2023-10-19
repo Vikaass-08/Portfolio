@@ -6,7 +6,6 @@
   background-color: var( --foreground-color);
   border-radius: 30px;
   margin: 2% 0% 2% 0%;
-  border: 0.2px solid var(--white);
 }
 .projectTag {
   width: 100%;

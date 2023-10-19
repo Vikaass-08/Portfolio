@@ -6,7 +6,6 @@
   background-color: var(--foreground-color);
   border-radius: 30px;
   margin: 2% 0% 2% 0%;
-  border: 0.2px solid var(--white);
 }
 a {
   color: blue;
@@ -47,11 +46,12 @@ a {
 }
 
 .homeBodyLeftSide > h1 {
-  color: var(--pink);
+  color: var(--light-blue);
 }
 
 .homeBodyRightSide {
   width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,6 +70,7 @@ a {
   width: 100%;
   display: flex;
   flex: 1;
+  margin-bottom: 20px;
 }
 
 .buttonOne {
@@ -100,8 +101,8 @@ a {
   width: 50px;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid var(--white);
-  color: var(--pink);
+  border: 1px solid var(--light-blue);
+  color: var(--light-blue);
   border-radius: 50%;
   margin: 0px 70px 0 0;
   transition: all 0.3s ease;
@@ -110,7 +111,7 @@ a {
 .socialSite svg {
   width: 30px;
   height: 30px;
-  fill: var(--pink)
+  fill: var(--light-blue)
 }
 
 svg:hover {
@@ -119,7 +120,7 @@ svg:hover {
 
 
 .socialSite:hover {
-  background-color: var(--pink);
+  background-color: var(--light-blue);
 }
 
 @media only screen and (max-width: 1080px) {
@@ -175,7 +176,7 @@ svg:hover {
 }
 
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
   .homePage {
     text-align: center;
   }
@@ -192,10 +193,10 @@ svg:hover {
     margin: 20px 0px 20px 0px
   }
 
-}
+} */
 
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 800px) { 
 
   .homePage {
     width: 90%;

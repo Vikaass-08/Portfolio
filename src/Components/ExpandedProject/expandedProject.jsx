@@ -1,14 +1,15 @@
 import { useState } from "react";
 import styles from "./expandedProject.module.css"
-import Button from "../Button/button";
+import BouncyButton from "../Button/bouncyButton";
 
 const ExpandedProject = (props) => {
 
 
   const [currState, updateState] = useState(props.expAnim);
 
-  const hideBtn = {
-    display: "none"
+  const hideDiv = (value) => {
+    if(value === undefined) return {display: "none"};
+    return {};
   }
 
   const fadeInAnim = `${styles.ExpProject} ${styles.zoomIn}`;
@@ -26,20 +27,28 @@ const ExpandedProject = (props) => {
         <img src={props.data.imgUrl} alt={props.data.imgAlt} />
       </div>
       <div className={styles.expProjTitle}>
-        <h1> {props.data.title} </h1>
+        <h1 className={styles.projTitle}> {props.data.title} </h1>
       </div>
-      <div className={styles.expProjDescription}>
-        <p> {props.data.description} </p>
+      <div className={styles.expProjDescription} style={hideDiv(props.data.description)}>
+        {
+          props.data.description.map((val) => 
+            <dd key={val} >{val}</dd>
+          )
+        }
       </div>
-      <div className={styles.expProjInfo}>
-        <h2>Tech Used: &nbsp; <span>{props.data.techUsed}</span> </h2>
+      <div className={styles.expProjInfo} style={hideDiv(props.data.techUsed)}>
+        {
+          props.data.techUsed.map((val, idx) => (
+            <span key={idx} className={styles.skill}>{val}</span>
+          ))
+        }
       </div>
       <div className={styles.expProjButton}>
-        <div style={ props.data.live === undefined ? hideBtn : {}} className={styles.expProjLiveBtn}>
-          <Button onClickAction={action(props.data.live)} buttonText="View Project" />
+        <div style={hideDiv(props.data.live)} className={styles.expProjLiveBtn}>
+          <BouncyButton onClickAction={action(props.data.live)} buttonText="View Project" />
         </div>
-        <div style={props.data.github === undefined ? hideBtn : {}} className={styles.expProjGithubBtn}>
-          <Button onClickAction={action(props.data.live)} buttonText="Github" />
+        <div style={hideDiv(props.data.github)} className={styles.expProjGithubBtn}>
+          <BouncyButton onClickAction={action(props.data.github)} buttonText="Github" />
         </div>
       </div>
     </div>

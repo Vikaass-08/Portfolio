@@ -1,11 +1,11 @@
 import { useState, useContext } from "react";
 import styles from "./homepage.module.css"
 import ProfilePic from "../../Static/Images/ProfilePic.jpeg"
-import Button from "../Button/button";
 import Paths from "../Paths/paths";
 import { useNavigate } from "react-router-dom";
 import Heading from "../Heading/Heading";
 import { Animation } from "../../Handlers/context";
+import BouncyButton from "../Button/bouncyButton";
 
 const Homepage = (props) => {
 
@@ -39,12 +39,14 @@ const Homepage = (props) => {
               <h1>vikas pathak</h1>
               <h2>full stack Web Developer</h2>
               <div className={styles.homeBodyButton}>
-                  <div className={styles.buttonOne}>
-                    <Button onClickAction={AboutMeAction} buttonText="ABOUT ME" />
-                  </div>
-                  <div className={styles.buttonTwo}>
-                    <Button onClickAction={ViewProjectAction} buttonText="VIEW PROJECTS" />
-                  </div>
+                <div className={styles.buttonOne}>
+                  <BouncyButton onClickAction={AboutMeAction} buttonText="ABOUT ME" />
+                </div>
+              </div>
+              <div className={styles.homeBodyButton}>
+                <div className={styles.buttonTwo}>
+                  <BouncyButton onClickAction={ViewProjectAction} buttonText="VIEW PROJECTS" />
+                </div>
               </div>
             </div>
             <div className={styles.homeBodyRightSide}>
