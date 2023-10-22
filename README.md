@@ -2,6 +2,10 @@
 
 Welcome to my React.js portfolio! This project showcases my web development skills and serves as an online portfolio to display my projects and accomplishments.
 
+<img width="1532" alt="Portfolio" src="https://github.com/Vikaass-08/Portfolio/assets/59832889/77bc6be5-e766-4cca-8494-2fbb9014025d">
+
+
+
 ## Table of Contents
 
 - [Demo](#demo)
