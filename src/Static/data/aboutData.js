@@ -29,11 +29,13 @@ export const EduData = [
 export const ExpData = [
   { date: "June 2022 - Present"
   , heading: "Juspay"
-  , subHeading: "Frontend Engineer"
+  , subHeading: "Software Engineer"
   , extra: 
-    [ "Worked on tech Such as Purescript, Javascript, React.js, Bitbucket."
-    , "Developed a generic Popup Model."
-    , "Worked on Test directory which has improved the development speed by 70%."
+    [ "Contributed to backend development for seamless merchant on boarding via internal dashboard, optimizing efficiency."
+    , "Increased efficiency by 40% through the implementation of a merchant- configurable animation control system, rebuilding the standard structure."
+    , "Designed and architected an efficient popup creation framework in a pure functional language"
+    , "Utilized Jenkins for CI/CD pipeline configuration."
+    , "Tech stack: Purescript,Javascript,Haskell,docker"
     ]
   , id: "ExpFirst"
   },

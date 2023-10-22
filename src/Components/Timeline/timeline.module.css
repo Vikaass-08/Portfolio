@@ -8,7 +8,7 @@
   position: absolute;
   left: 5px;
   top: 0%;
-  background-color: var(--light-blue);
+  background-color: var(--dark-grey);
   width: 1px;
   height: 100%;
 }
@@ -20,11 +20,11 @@
   width: 11px;
   top: 16px;
   left: 0px;
-  background-color: var(--light-blue);
+  background-color: var(--dark-grey);
   border-radius: 50%;
 }
 .timelineItem .date {
-  color: var(--light-blue);
+  color: var(--dark-grey);
   padding-bottom: 10px;
   font-weight: 500;
 }

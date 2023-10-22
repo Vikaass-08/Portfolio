@@ -3,7 +3,7 @@
   min-height: 80vh;
   height: auto;
   padding: 2% 2% 2% 2%;
-  background-color: var( --foreground-color);
+  background-color: var(--primary-color);
   border-radius: 30px;
   margin: 2% 0% 2% 0%;
 }

@@ -1,12 +1,25 @@
-import TradingWorld from "../../Static/Images/TradingWorld.png"
-import blackJack from "../../Static/Images/blackjack.jpg"
-import CoolSkool from "../../Static/Images/CoolSkool.png"
-import health from "../../Static/Images/health.jpg"
-import iot from "../../Static/Images/iot.jpg"
-import slack from "../../Static/Images/Slack.png"
-import spaceInvader from "../../Static/Images/spaceInvader.png"
+import TradingWorld from "../Images/TradingWorld.png"
+import blackJack from "../Images/blackjack.jpg"
+import CoolSkool from "../Images/CoolSkool.png"
+import health from "../Images/health.jpg"
+import iot from "../Images/iot.jpg"
+import slack from "../Images/Slack.png"
+import spaceInvader from "../Images/spaceInvader.png"
+import dealMaker from "../Images/dealMaker.jpg"
 
 const cardData = [
+  { imgUrl : dealMaker
+  , imgAlt: "Deal-maker-img"
+  , title: "Deal Maker"
+  , description: 
+      [ "It is a premier backend solution dedicated to optimizing the document signing process for lenders and borrowers."
+      , "There are 2 kinds of user (BORROWER, LENDER)."
+      , "Lender can create and make changes in the documents (Before Signing), accept document signing request from a borrower."
+      , "Borrowers can apply for document Signing for any lenders, once accepted then the signing process takes place."
+      ]
+  , techUsed: ["Rust", "PSQL", "Postman"]
+  , github: "https://github.com/Vikaass-08/deal-maker"
+  },
   { imgUrl : TradingWorld
   , imgAlt: "Project Image"
   , title: "Trading World"
@@ -19,7 +32,7 @@ const cardData = [
   , github: "https://github.com/Vikaass-08/TradingWorld"
   },
   { imgUrl : CoolSkool
-  , imgAlt: "Project Image"
+  , imgAlt: "cool-skool-img"
   , title: "CoolSkool"
   , description: 
       [ "So much to learn, so little time. Sometimes studying is a little easier and more enjoyable with a buddy."
@@ -31,7 +44,7 @@ const cardData = [
   , github: "https://github.com/Vikaass-08/coolskool-live"
   },
   { imgUrl : slack
-  , imgAlt: "Project Image"
+  , imgAlt: "sack-clone-img"
   , title: "Slack Clone"
   , description: 
       [ "It is a social site with features like creating and joining chat rooms."
@@ -42,7 +55,7 @@ const cardData = [
   , github: "https://github.com/Vikaass-08/SlackClone"
   },
   { imgUrl : iot
-  , imgAlt: "Project Image"
+  , imgAlt: "IOT-img"
   , title: "Home Authentication & Automation System"
   , description: 
       [ "It has a fingerprint sensor lock system with motion detector and camera attached to increase the security measure."
@@ -52,7 +65,7 @@ const cardData = [
   , live: "https://www.linkedin.com/posts/vikaass08_raspberrypi4-pythonprogramming-rfidtechnology-activity-6708442802453262336-gACt/?utm_source=share&utm_medium=member_desktop"
   },
   { imgUrl : health
-  , imgAlt: "Project Image"
+  , imgAlt: "Health-monitoring-img"
   , title: "Remote IOT Based Health Monitoring System"
   , description: 
       [ "It is a health monitoring system that read live data about patient's heart rate, body temperature, glucose and these data is send to an API"
@@ -63,7 +76,7 @@ const cardData = [
   , techUsed: ["Ardunio", "Django"]
   },
   { imgUrl : spaceInvader
-  , imgAlt: "Project Image"
+  , imgAlt: "spacke-invader-img"
   , title: "Space Invader"
   , description: 
       [ "Recreated the old school game called space Invaders using python pygame."
@@ -72,7 +85,7 @@ const cardData = [
   , github: "https://github.com/Vikaass-08/Space-Invaders/tree/master"
   },
   { imgUrl : blackJack
-  , imgAlt: "Project Image"
+  , imgAlt: "blackjack-img"
   , title: "BlackJack Card Game"
   , description: 
       [ "It's a card game in which the you will play against a bot."

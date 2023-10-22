@@ -3,12 +3,11 @@
   min-height: 80vh;
   height: auto;
   padding: 3%;
-  background-color: var(--foreground-color);
+  background-color: var(--primary-color);
   border-radius: 30px;
   margin: 2% 0% 2% 0%;
 }
 a {
-  color: blue;
   text-decoration: none;
 }
 
@@ -43,10 +42,11 @@ a {
 .homeBodyLeftSide > p, h1, h2 {
   flex: 1;
   margin-bottom: 25px;
+  color: var(--text-color);
 }
 
 .homeBodyLeftSide > h1 {
-  color: var(--light-blue);
+  color: var(--dark-grey);
 }
 
 .homeBodyRightSide {
@@ -100,9 +100,9 @@ a {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid var(--light-blue);
-  color: var(--light-blue);
+  background-color: var(--primary-color);
+  border: 1px solid var(--dark-grey);
+  color: var(--dark-grey);
   border-radius: 50%;
   margin: 0px 70px 0 0;
   transition: all 0.3s ease;
@@ -111,7 +111,7 @@ a {
 .socialSite svg {
   width: 30px;
   height: 30px;
-  fill: var(--light-blue)
+  fill: var(--dark-grey)
 }
 
 svg:hover {
@@ -120,7 +120,7 @@ svg:hover {
 
 
 .socialSite:hover {
-  background-color: var(--light-blue);
+  background-color: var(--seconday-color);
 }
 
 @media only screen and (max-width: 1080px) {
@@ -174,26 +174,6 @@ svg:hover {
   }
 
 }
-
-
-/* @media only screen and (max-width: 800px) {
-  .homePage {
-    text-align: center;
-  }
-  .homeBodyButton {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .buttonOne {
-    margin: 20px 0px 0px 0px
-  }
-  
-  .buttonTwo {
-    margin: 20px 0px 20px 0px
-  }
-
-} */
 
 
 @media only screen and (max-width: 800px) { 

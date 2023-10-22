@@ -4,7 +4,7 @@
   height: auto;
   margin: 2% 0% 2% 0%;
   padding: 2% 2% 2% 2%;  
-  background-color: var(--foreground-color);
+  background-color: var(--primary-color);
   border-radius: 30px;
   font-weight: 300;
 }
@@ -40,7 +40,7 @@
   align-items: center;
   background-color: var(--white);
   max-width: 380px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   margin: auto;
   border-radius: 10px;
 }
@@ -65,8 +65,8 @@
 }
 
 .skill {
-  background-color: var(--blue);
-  border: 1px solid var(--light-blue);
+  background-color: var(--background-color);
+  border: 1px solid var(--dark-grey);
   padding: 5px 15px;
   text-transform: capitalize;
   margin: 0px;
@@ -99,7 +99,7 @@
 }
 
 .active {
- color: var(--light-blue) !important;
+ color: var(--text-color) !important;
  border-bottom: 1px solid !important;
  opacity: 1 !important;
  cursor: auto !important;
