@@ -12,7 +12,7 @@ const Projects = (props) => {
 
   const [expandPopup, setPopupValue] = useState(false);
   const [ProjectData, setProjectData] = useState({});
-  const {animationType} = useContext(Animation);
+  const {animationType, showNavbar, setNavbar} = useContext(Animation);
 
   const showPopupBtn = (data) => (() => {
       setProjectData(data);
@@ -22,13 +22,13 @@ const Projects = (props) => {
   const normalClass = `${styles.projects}`;
 
   return (
-    props.showNavbar ? 
-      <Paths showNavbar={props.showNavbar} setNavbar={props.setNavbar}  /> :
+    showNavbar ? 
+      <Paths/> :
       expandPopup ? 
         <ExpandedProject data={ProjectData} setPopupValue={setPopupValue} expAnim={expandPopup}  /> : 
         (
           <div className={animationType === "projectAnim" ? fadeInAnim : normalClass }>
-            <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
+            <Heading setNavbar={setNavbar}/>
             <div className={styles.projectTag}>
               <h1>Recent Projects</h1>
             </div>

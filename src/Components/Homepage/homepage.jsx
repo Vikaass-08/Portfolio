@@ -11,7 +11,7 @@ const Homepage = (props) => {
 
   const navigate = useNavigate();
   const [currState, updateState] = useState(false);
-  const {setAnimationType} = useContext(Animation);
+  const {setAnimationType, showNavbar, setNavbar} = useContext(Animation);
 
   const AboutMeAction = () => {
     updateState(true);
@@ -28,11 +28,11 @@ const Homepage = (props) => {
   const fadeInAnim = `${styles.homePage}`;
 
   return (
-    props.showNavbar ? 
-      <Paths showNavbar={props.showNavbar} setNavbar={props.setNavbar}  /> :
+    showNavbar ? 
+      <Paths/> :
       (
         <div  className={currState ? fadeOutAnim : fadeInAnim }>
-          <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
+          <Heading setNavbar={setNavbar}/>
           <div className={styles.homeBody}>
             <div className={styles.homeBodyLeftSide}>
               <p>Hello, I'm</p>

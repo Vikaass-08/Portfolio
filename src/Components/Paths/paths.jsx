@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Animation } from "../../Handlers/context";
 
 const Paths = (props) => {
-
-  const [currState, updateState] = useState(props.showNavbar);
-  const {setAnimationType} = useContext(Animation);
+  const {setAnimationType, setNavbar, showNavbar} = useContext(Animation);
+  const [currState, updateState] = useState(showNavbar);
   const navigate = useNavigate();
 
   const fadeInAnim = `${styles.paths} ${styles.zoomIn}`;
@@ -17,13 +16,13 @@ const Paths = (props) => {
     updateState(false); 
     setTimeout( () => {
       navigate(path); 
-      props.setNavbar(false);
+      setNavbar(false);
     }, 200);
   }
 
   return (
     <div className={currState ? fadeInAnim : fadeOutAnim }>
-      <div className={styles.expProjCross} onClick={() => {updateState(false); setTimeout( () => {props.setNavbar(false)}, 200); } }>
+      <div className={styles.expProjCross} onClick={() => {updateState(false); setTimeout( () => {setNavbar(false)}, 200); } }>
         <div className={styles.expProjCrossBefore}></div>
         <div className={styles.expProjCrossAfter}></div>
       </div>

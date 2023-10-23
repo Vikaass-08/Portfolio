@@ -15,11 +15,11 @@ function App() {
     <>
       <div className={styles.App}>
         <div className={styles.Container}>
-          <Animation.Provider value={{animationType, setAnimationType}}>
+          <Animation.Provider value={{animationType, setAnimationType, showNavbar, setNavbar}}>
             <Routes>
-              <Route path ="/" element={<Homepage setNavbar={setNavbar} showNavbar={showNavbar} />} />
-              <Route path ="/about" element={<About setNavbar={setNavbar} showNavbar={showNavbar} />} />
-              <Route path ="/project" element={<Projects setNavbar={setNavbar} showNavbar={showNavbar} />} />
+              <Route path ="/" element={<Homepage />} />
+              <Route path ="/about" element={<About />} />
+              <Route path ="/project" element={<Projects />} />
             </Routes>
           </Animation.Provider>
         </div>

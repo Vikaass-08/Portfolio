@@ -9,7 +9,7 @@ import { EduData, aboutMe, skillSet, ExpData } from "../../Static/data/aboutData
 
 const About = (props) => {
   const [activeButton, setActiveButton] = useState(true);
-  const {animationType} = useContext(Animation);
+  const {animationType, showNavbar, setNavbar} = useContext(Animation);
 
   const eduBtnAction = () => {
     setActiveButton(true);
@@ -23,11 +23,11 @@ const About = (props) => {
   const normalClass = `${styles.about}`;
 
   return (
-    props.showNavbar ? 
-      <Paths showNavbar={props.showNavbar} setNavbar={props.setNavbar}  /> :
+    showNavbar ? 
+      <Paths/> :
       (
         <div className={animationType === "aboutAnim" ? fadeInAnim : normalClass }>
-          <Heading setNavbar={props.setNavbar} showNavbar={props.showNavbar} />
+          <Heading setNavbar={setNavbar}/>
           <div className={styles.aboutHeading}>
             <h2>about me</h2>
           </div>

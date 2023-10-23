@@ -6,7 +6,7 @@ const Heading = (props) => {
   return (
     <div className={styles.header}>
       <Logo/>
-      <Navbar showNavbar={props.showNavbar} setNavbar={props.setNavbar}  />
+      <Navbar setNavbar={props.setNavbar} />
     </div>
   )
 };
