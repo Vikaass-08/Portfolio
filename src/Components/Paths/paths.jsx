@@ -36,6 +36,9 @@ const Paths = (props) => {
         <div className={styles.button}>
           <button onClick={() => changePath("/project")}>PROJECTS</button>
         </div>
+        <div className={styles.button}>
+          <button onClick={() => changePath("/contact")}>CONTACT ME</button>
+        </div>
       </div>
     </div>
   )

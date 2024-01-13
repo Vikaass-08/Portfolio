@@ -5,6 +5,7 @@ import About from './Components/About/about.jsx';
 import styles from "./App.module.css"
 import Projects from './Components/Projects/projects.jsx';
 import { Animation } from './Handlers/context.jsx';
+import ContactUs from './Components/ContactUs/contactUs.jsx';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
               <Route path ="/" element={<Homepage />} />
               <Route path ="/about" element={<About />} />
               <Route path ="/project" element={<Projects />} />
+              <Route path ="/contact" element={<ContactUs />} />
             </Routes>
           </Animation.Provider>
         </div>
