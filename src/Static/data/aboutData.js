@@ -24,7 +24,18 @@ export const EduData = [
 
 export const ExpData = [
   {
-    date: "Feb 2025 - Present",
+    date: "March 2026 - Present",
+    heading: "Clevertap",
+    subHeading: "Senior Backend Engineer",
+    extra: [
+      "Working with billions of events in event-driven architecture.",
+      "Making customer acquisition easy.",
+      "Tech stack: Java Springboot,Redis,MongoDB",
+    ],
+    id: "clevertap",
+  },
+  {
+    date: "Feb 2025 - March 2026",
     heading: "Plumhq",
     subHeading: "SDE 2",
     extra: [
